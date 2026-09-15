@@ -1,0 +1,150 @@
+[
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_dial.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_dial.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_hm_logo_exact.png.flat",
+        "source": "com.handoverme.app-main-35:/drawable/hm_logo_exact.png"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_phone.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_phone.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_button_green.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_button_green.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_feature_red.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_feature_red.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_blue.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_blue.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_display.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_display.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_blue_circle_button.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_blue_circle_button.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_card.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_card.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_mic.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_mic.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_fingerprint.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_fingerprint.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_security_shield.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_security_shield.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_shield_phone.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_shield_phone.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/xml_device_admin_receiver.xml.flat",
+        "source": "com.handoverme.app-main-35:/xml/device_admin_receiver.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_call_glow.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_call_glow.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_handover_logo_transparent.png.flat",
+        "source": "com.handoverme.app-main-35:/drawable/handover_logo_transparent.png"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_green_circle.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_green_circle.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_speaker.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_speaker.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_backspace.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_backspace.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_blue_circle.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_blue_circle.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/layout_activity_main.xml.flat",
+        "source": "com.handoverme.app-main-35:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_check.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_check.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_feature_blue.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_feature_blue.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_button.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_button.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_status.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_status.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_wave.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_wave.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_danger.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_danger.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_feature_green.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_feature_green.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_green_circle_button.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_green_circle_button.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_lock_red.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_lock_red.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_settings.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_face.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_face.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_auth_card.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_auth_card.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_person.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_person.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_lock.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_lock.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_bg_green_outline.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/bg_green_outline.xml"
+    },
+    {
+        "merged": "com.handoverme.app-debug-33:/drawable_ic_pin.xml.flat",
+        "source": "com.handoverme.app-main-35:/drawable/ic_pin.xml"
+    }
+]

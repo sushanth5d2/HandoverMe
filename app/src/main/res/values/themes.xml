@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="Theme.HandoverMe" parent="Theme.Material3.DayNight.NoActionBar">
+    <item name="android:fontFamily">sans</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:colorAccent">@color/electric_blue</item>
+    <item name="android:navigationBarColor">@color/true_black</item>
+    <item name="android:statusBarColor">@color/true_black</item>
+    <item name="android:windowLightStatusBar">false</item>
+    <item name="android:windowLightNavigationBar">false</item>
+    <item name="android:windowBackground">@color/true_black</item>
+    <item name="android:windowActionModeOverlay">true</item>
+</style>
+<style name="DialButton">
+    <item name="android:layout_width">0dp</item><item name="android:layout_height">0dp</item>
+    <item name="android:layout_columnWeight">1</item><item name="android:layout_rowWeight">1</item>
+    <item name="android:layout_margin">5dp</item><item name="android:gravity">center</item>
+    <item name="android:background">@drawable/bg_dial</item><item name="android:textColor">#F7FBFD</item>
+    <item name="android:textSize">24sp</item><item name="android:textStyle">normal</item>
+    <item name="android:fontFamily">sans</item>
+</style>
+<style name="PinButton" parent="DialButton"><item name="android:textSize">23sp</item></style>
+<style name="PinBlueButton" parent="PinButton"><item name="android:background">@drawable/bg_blue_circle_button</item></style>
+<style name="PinRedButton" parent="PinButton"><item name="android:background">@drawable/bg_danger</item></style>
+<style name="PinGreenButton" parent="PinButton"><item name="android:background">@drawable/bg_green_circle_button</item></style>
+</resources>

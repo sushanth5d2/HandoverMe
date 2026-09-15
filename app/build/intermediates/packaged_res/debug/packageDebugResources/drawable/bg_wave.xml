@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Wave line 1 (outermost) -->
+    <item android:top="38dp" android:bottom="38dp" android:left="6dp" android:right="6dp">
+        <shape android:shape="oval">
+            <stroke android:width="1dp" android:color="#1A10E87A"/>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+    <!-- Wave line 2 -->
+    <item android:top="44dp" android:bottom="44dp" android:left="20dp" android:right="20dp">
+        <shape android:shape="oval">
+            <stroke android:width="1dp" android:color="#3310E87A"/>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+    <!-- Wave line 3 -->
+    <item android:top="50dp" android:bottom="50dp" android:left="34dp" android:right="34dp">
+        <shape android:shape="oval">
+            <stroke android:width="1.5dp" android:color="#5510E87A"/>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+    <!-- Wave line 4 -->
+    <item android:top="56dp" android:bottom="56dp" android:left="48dp" android:right="48dp">
+        <shape android:shape="oval">
+            <stroke android:width="1.5dp" android:color="#7710E87A"/>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+    <!-- Wave line 5 (innermost) -->
+    <item android:top="62dp" android:bottom="62dp" android:left="62dp" android:right="62dp">
+        <shape android:shape="oval">
+            <stroke android:width="2dp" android:color="#9910E87A"/>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+</layer-list>

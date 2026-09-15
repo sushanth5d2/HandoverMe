@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cyan_blue">#00CFFF</color>
+    <color name="dial_fill">#132B3A</color>
+    <color name="dial_stroke">#39B8D5</color>
+    <color name="electric_blue">#0B8DFF</color>
+    <color name="muted">#B9C5CC</color>
+    <color name="panel">#0E1C26</color>
+    <color name="security_green">#00F05A</color>
+    <color name="security_red">#FF3045</color>
+    <color name="true_black">#02080C</color>
+    <string name="activate_secure_mode">Activate Secure Lending Mode</string>
+    <string name="app_name">Handover Me</string>
+    <string name="device_admin_description">Handover Me dedicated-device kiosk administrator</string>
+    <string name="security_shield">Security shield</string>
+    <style name="DialButton">
+    <item name="android:layout_width">0dp</item><item name="android:layout_height">0dp</item>
+    <item name="android:layout_columnWeight">1</item><item name="android:layout_rowWeight">1</item>
+    <item name="android:layout_margin">5dp</item><item name="android:gravity">center</item>
+    <item name="android:background">@drawable/bg_dial</item><item name="android:textColor">#F7FBFD</item>
+    <item name="android:textSize">24sp</item><item name="android:textStyle">normal</item>
+    <item name="android:fontFamily">sans</item>
+</style>
+    <style name="PinBlueButton" parent="PinButton"><item name="android:background">@drawable/bg_blue_circle_button</item></style>
+    <style name="PinButton" parent="DialButton"><item name="android:textSize">23sp</item></style>
+    <style name="PinGreenButton" parent="PinButton"><item name="android:background">@drawable/bg_green_circle_button</item></style>
+    <style name="PinRedButton" parent="PinButton"><item name="android:background">@drawable/bg_danger</item></style>
+    <style name="Theme.HandoverMe" parent="Theme.Material3.DayNight.NoActionBar">
+    <item name="android:fontFamily">sans</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:colorAccent">@color/electric_blue</item>
+    <item name="android:navigationBarColor">@color/true_black</item>
+    <item name="android:statusBarColor">@color/true_black</item>
+    <item name="android:windowLightStatusBar">false</item>
+    <item name="android:windowLightNavigationBar">false</item>
+    <item name="android:windowBackground">@color/true_black</item>
+    <item name="android:windowActionModeOverlay">true</item>
+</style>
+</resources>

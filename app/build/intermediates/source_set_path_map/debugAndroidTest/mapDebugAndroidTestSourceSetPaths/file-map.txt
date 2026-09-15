@@ -1,0 +1,4 @@
+com.handoverme.app.test.app-androidTest-0 C:\Users\sushanth\Downloads\HandoverMe-Android7-to-16-Universal-Dual-SIM-Fix\HandoverMe\app\build\generated\res\resValues\androidTest\debug
+com.handoverme.app.test.app-mergeDebugAndroidTestResources-1 C:\Users\sushanth\Downloads\HandoverMe-Android7-to-16-Universal-Dual-SIM-Fix\HandoverMe\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.handoverme.app.test.app-mergeDebugAndroidTestResources-2 C:\Users\sushanth\Downloads\HandoverMe-Android7-to-16-Universal-Dual-SIM-Fix\HandoverMe\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.handoverme.app.test.app-debugAndroidTest-3 C:\Users\sushanth\Downloads\HandoverMe-Android7-to-16-Universal-Dual-SIM-Fix\HandoverMe\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

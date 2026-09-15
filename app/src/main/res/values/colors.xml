@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="true_black">#02080C</color>
+    <color name="security_green">#00F05A</color>
+    <color name="security_red">#FF3045</color>
+    <color name="electric_blue">#0B8DFF</color>
+    <color name="cyan_blue">#00CFFF</color>
+    <color name="muted">#B9C5CC</color>
+    <color name="panel">#0E1C26</color>
+    <color name="dial_fill">#132B3A</color>
+    <color name="dial_stroke">#39B8D5</color>
+</resources>

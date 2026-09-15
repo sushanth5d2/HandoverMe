@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Handover Me</string>
+    <string name="activate_secure_mode">Activate Secure Lending Mode</string>
+    <string name="security_shield">Security shield</string>
+    <string name="device_admin_description">Handover Me dedicated-device kiosk administrator</string>
+</resources>

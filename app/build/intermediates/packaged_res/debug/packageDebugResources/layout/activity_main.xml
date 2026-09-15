@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#02080C">
+
+    <!-- 1. Splash: intentionally stays here until Get Started is pressed. -->
+    <LinearLayout android:id="@+id/splashView" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_horizontal" android:orientation="vertical" android:paddingStart="28dp" android:paddingEnd="28dp" android:paddingTop="42dp" android:paddingBottom="18dp">
+        <ImageView android:layout_width="116dp" android:layout_height="150dp" android:src="@drawable/hm_logo_exact" android:scaleType="fitCenter" android:contentDescription="Handover Me"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-1dp" android:text="Handover Me" android:textColor="#F8FBFD" android:textSize="29sp" android:textStyle="bold" android:fontFamily="sans"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Safe to share. Hard to misuse." android:textColor="#D6DEE3" android:textSize="14sp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="23dp" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="60dp" android:gravity="center_vertical">
+                <ImageView android:layout_width="44dp" android:layout_height="44dp" android:padding="10dp" android:src="@drawable/ic_phone" android:background="@drawable/bg_feature_green" app:tint="#F7FFFF"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Allow calls only" android:textColor="#F7FBFD" android:textSize="14sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:text="Keep your personal data private" android:textColor="#B9C5CC" android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="60dp" android:gravity="center_vertical">
+                <ImageView android:layout_width="44dp" android:layout_height="44dp" android:padding="10dp" android:src="@drawable/ic_lock" android:background="@drawable/bg_feature_blue" app:tint="#F7FBFD"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Stay in control" android:textColor="#F7FBFD" android:textSize="14sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Exit anytime with your secure PIN" android:textColor="#B9C5CC" android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="60dp" android:gravity="center_vertical">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:gravity="center" android:text="⊘" android:textColor="#FFFFFF" android:textSize="25sp" android:background="@drawable/bg_feature_red"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="12dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Prevent misuse" android:textColor="#F7FBFD" android:textSize="14sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Blocks settings, apps and unwanted access" android:textColor="#B9C5CC" android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/btnGetStarted" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="13dp" android:gravity="center" android:background="@drawable/bg_blue" android:text="Get Started  →" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center" android:text="Powered by&#10;Sushanth Chithaluri" android:textColor="#D7E0E6" android:textSize="10sp"/>
+    </LinearLayout>
+
+    <!-- 2. Owner authentication -->
+    <LinearLayout android:id="@+id/authView" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_horizontal" android:orientation="vertical" android:paddingStart="22dp" android:paddingEnd="22dp" android:paddingTop="10dp" android:paddingBottom="12dp" android:visibility="gone">
+        <TextView android:id="@+id/btnAuthBack" android:layout_width="match_parent" android:layout_height="38dp" android:gravity="center_vertical" android:text="‹" android:textColor="#FFFFFF" android:textSize="36sp"/>
+        <ImageView android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/handover_logo_transparent"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:text="Handover Me" android:textColor="#F8FBFD" android:textSize="17sp" android:textStyle="bold"/>
+        <FrameLayout android:layout_width="88dp" android:layout_height="88dp" android:layout_marginTop="20dp" android:background="@drawable/bg_blue_circle">
+            <ImageView android:layout_width="57dp" android:layout_height="57dp" android:layout_gravity="center" android:src="@drawable/ic_fingerprint" app:tint="#00CFFF"/>
+        </FrameLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:gravity="center" android:text="Owner Authentication&#10;Required" android:textColor="#F8FBFD" android:textSize="18sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center" android:text="Verify using your phone's screen lock&#10;to continue." android:textColor="#C0CAD1" android:textSize="13sp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:orientation="vertical" android:background="@drawable/bg_auth_card">
+            <LinearLayout android:id="@+id/btnAuthenticate" android:layout_width="match_parent" android:layout_height="52dp" android:gravity="center_vertical" android:paddingStart="17dp"><ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_fingerprint" app:tint="#FFFFFF"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="13dp" android:text="Use Fingerprint" android:textColor="#FFFFFF" android:textSize="13sp"/></LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#203D4D"/>
+            <LinearLayout android:id="@+id/btnFaceUnlock" android:layout_width="match_parent" android:layout_height="52dp" android:gravity="center_vertical" android:paddingStart="17dp" android:clickable="true" android:focusable="true"><ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_face" app:tint="#FFFFFF"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="13dp" android:text="Use Face Unlock" android:textColor="#FFFFFF" android:textSize="13sp"/></LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#203D4D"/>
+            <LinearLayout android:id="@+id/btnDeviceCredential" android:layout_width="match_parent" android:layout_height="52dp" android:gravity="center_vertical" android:paddingStart="17dp" android:clickable="true" android:focusable="true"><ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_lock" app:tint="#FFFFFF"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="13dp" android:text="Use PIN / Pattern" android:textColor="#FFFFFF" android:textSize="13sp"/></LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/authCancel" android:layout_width="wrap_content" android:layout_height="32dp" android:layout_marginTop="5dp" android:gravity="center" android:text="Cancel" android:textColor="#FFFFFF" android:textSize="13sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:gravity="center" android:text="Powered by&#10;Sushanth Chithaluri" android:textColor="#D7E0E6" android:textSize="10sp"/>
+    </LinearLayout>
+
+    <!-- 3. Create secure PIN -->
+    <LinearLayout android:id="@+id/pinSetupView" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_horizontal" android:orientation="vertical" android:paddingStart="24dp" android:paddingEnd="24dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:visibility="gone">
+        <TextView android:id="@+id/btnPinBack" android:layout_width="match_parent" android:layout_height="38dp" android:gravity="center_vertical" android:text="‹" android:textColor="#FFFFFF" android:textSize="36sp"/>
+        <ImageView android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/handover_logo_transparent"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Handover Me" android:textColor="#F8FBFD" android:textSize="17sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="23dp" android:text="Set Your Secure PIN" android:textColor="#F8FBFD" android:textSize="18sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center" android:text="This PIN will be used to exit&#10;Secure Lending Mode." android:textColor="#D0D9DE" android:textSize="13sp"/>
+        <TextView android:id="@+id/pinDots" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_marginTop="5dp" android:gravity="center" android:text="○  ○  ○  ○" android:textColor="#9FC2D7" android:textSize="17sp"/>
+        <GridLayout android:id="@+id/pinSetupPad" android:layout_width="match_parent" android:layout_height="292dp" android:layout_marginTop="1dp" android:columnCount="3" android:rowCount="4">
+            <TextView android:id="@+id/pin1" style="@style/PinButton" android:text="1"/><TextView android:id="@+id/pin2" style="@style/PinButton" android:text="2"/><TextView android:id="@+id/pin3" style="@style/PinButton" android:text="3"/>
+            <TextView android:id="@+id/pin4" style="@style/PinButton" android:text="4"/><TextView android:id="@+id/pin5" style="@style/PinButton" android:text="5"/><TextView android:id="@+id/pin6" style="@style/PinButton" android:text="6"/>
+            <TextView android:id="@+id/pin7" style="@style/PinButton" android:text="7"/><TextView android:id="@+id/pin8" style="@style/PinButton" android:text="8"/><TextView android:id="@+id/pin9" style="@style/PinButton" android:text="9"/>
+            <TextView android:id="@+id/pinDelete" style="@style/PinButton" android:text="⌫"/><TextView android:id="@+id/pin0" style="@style/PinButton" android:text="0"/><TextView android:id="@+id/pinNext" style="@style/PinBlueButton" android:text="✓"/>
+        </GridLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:gravity="center" android:text="Powered by&#10;Sushanth Chithaluri" android:textColor="#D7E0E6" android:textSize="10sp"/>
+    </LinearLayout>
+
+    <!-- 4. Confirm PIN -->
+    <LinearLayout android:id="@+id/pinConfirmView" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_horizontal" android:orientation="vertical" android:paddingStart="24dp" android:paddingEnd="24dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:visibility="gone">
+        <TextView android:id="@+id/btnConfirmBack" android:layout_width="match_parent" android:layout_height="38dp" android:gravity="center_vertical" android:text="‹" android:textColor="#FFFFFF" android:textSize="36sp"/>
+        <ImageView android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/handover_logo_transparent"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Handover Me" android:textColor="#F8FBFD" android:textSize="17sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="23dp" android:text="Confirm Secure PIN" android:textColor="#F8FBFD" android:textSize="18sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:gravity="center" android:text="Enter the same PIN again&#10;to confirm." android:textColor="#D0D9DE" android:textSize="13sp"/>
+        <TextView android:id="@+id/confirmDots" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_marginTop="5dp" android:gravity="center" android:text="○  ○  ○  ○" android:textColor="#9FC2D7" android:textSize="17sp"/>
+        <GridLayout android:id="@+id/pinConfirmPad" android:layout_width="match_parent" android:layout_height="292dp" android:layout_marginTop="1dp" android:columnCount="3" android:rowCount="4">
+            <TextView android:id="@+id/cpin1" style="@style/PinButton" android:text="1"/><TextView android:id="@+id/cpin2" style="@style/PinButton" android:text="2"/><TextView android:id="@+id/cpin3" style="@style/PinButton" android:text="3"/>
+            <TextView android:id="@+id/cpin4" style="@style/PinButton" android:text="4"/><TextView android:id="@+id/cpin5" style="@style/PinButton" android:text="5"/><TextView android:id="@+id/cpin6" style="@style/PinButton" android:text="6"/>
+            <TextView android:id="@+id/cpin7" style="@style/PinButton" android:text="7"/><TextView android:id="@+id/cpin8" style="@style/PinButton" android:text="8"/><TextView android:id="@+id/cpin9" style="@style/PinButton" android:text="9"/>
+            <TextView android:id="@+id/cpinDelete" style="@style/PinButton" android:text="⌫"/><TextView android:id="@+id/cpin0" style="@style/PinButton" android:text="0"/><TextView android:id="@+id/cpinDone" style="@style/PinBlueButton" android:text="✓"/>
+        </GridLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center" android:text="Powered by&#10;Sushanth Chithaluri" android:textColor="#D7E0E6" android:textSize="10sp"/>
+    </LinearLayout>
+
+    <!-- 5. PIN set -->
+    <LinearLayout android:id="@+id/pinSetView" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:padding="28dp" android:background="#03100B" android:visibility="gone">
+        <FrameLayout android:layout_width="94dp" android:layout_height="94dp" android:background="@drawable/bg_green_outline"><ImageView android:layout_width="56dp" android:layout_height="56dp" android:layout_gravity="center" android:src="@drawable/ic_check" app:tint="#FFFFFF"/></FrameLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="Secure PIN Set!" android:textColor="#F8FBFD" android:textSize="20sp" android:textStyle="bold"/>
+        <TextView android:layout_width="260dp" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:gravity="center" android:text="Your secure PIN is ready.&#10;&#10;You can now activate&#10;Secure Lending Mode." android:textColor="#D3DCE0" android:textSize="14sp"/>
+        <TextView android:id="@+id/btnGoHome" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="33dp" android:gravity="center" android:background="@drawable/bg_button_green" android:text="Go to Home" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- 6. Owner Home -->
+    <LinearLayout android:id="@+id/ownerView" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="6dp" android:paddingBottom="10dp" android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:gravity="center_vertical">
+            <ImageView android:layout_width="31dp" android:layout_height="31dp" android:src="@drawable/handover_logo_transparent" android:contentDescription="Handover Me"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="7dp" android:text="Handover Me" android:textColor="#F8FBFD" android:textSize="16sp" android:textStyle="bold"/>
+            <ImageButton android:id="@+id/btnSettings" android:layout_width="40dp" android:layout_height="40dp" android:background="@android:color/transparent" android:src="@drawable/ic_settings" android:padding="6dp" android:contentDescription="Settings" app:tint="#F8FBFD"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="13dp" android:background="@drawable/bg_card">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your phone.
+Your control." android:textColor="#F8FBFD" android:textSize="18sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Let others make calls without
+access to your data." android:textColor="#D0D9DE" android:textSize="12sp"/>
+            <LinearLayout android:id="@+id/btnSecurePinRow" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="10dp" android:gravity="center_vertical" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_lock" app:tint="#10E87A"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Secure PIN" android:textColor="#FFFFFF" android:textSize="11sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Configured" android:textColor="#10E87A" android:textSize="11sp" android:textStyle="bold"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="#FFFFFF" android:textSize="28sp" android:includeFontPadding="false"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView android:id="@+id/btnActivate" android:layout_width="match_parent" android:layout_height="58dp" android:layout_marginTop="8dp" android:gravity="center" android:background="@drawable/bg_button_green" android:text="▶  Activate Secure
+     Lending Mode" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold"/>
+
+        <LinearLayout android:id="@+id/btnSetPin" android:layout_width="match_parent" android:layout_height="46dp" android:layout_marginTop="8dp" android:gravity="center_vertical" android:paddingStart="14dp" android:paddingEnd="10dp" android:background="@drawable/bg_card" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="21dp" android:layout_height="21dp" android:src="@drawable/ic_lock" app:tint="#FFFFFF"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:text="Change Secure PIN" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="#FFFFFF" android:textSize="25sp" android:includeFontPadding="false"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/btnHow" android:layout_width="match_parent" android:layout_height="46dp" android:layout_marginTop="5dp" android:gravity="center_vertical" android:paddingStart="14dp" android:paddingEnd="10dp" android:background="@drawable/bg_card" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="21dp" android:layout_height="21dp" android:src="@drawable/ic_pin" app:tint="#FFFFFF"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:text="How it works" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="#FFFFFF" android:textSize="25sp" android:includeFontPadding="false"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/btnAbout" android:layout_width="match_parent" android:layout_height="46dp" android:layout_marginTop="5dp" android:gravity="center_vertical" android:paddingStart="14dp" android:paddingEnd="10dp" android:background="@drawable/bg_card" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="21dp" android:layout_height="21dp" android:src="@drawable/ic_security_shield" app:tint="#FFFFFF"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:text="About Handover Me" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="›" android:textColor="#FFFFFF" android:textSize="25sp" android:includeFontPadding="false"/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center" android:text="Powered by&#10;Sushanth Chithaluri" android:textColor="#D7E0E6" android:textSize="10sp"/>
+    </LinearLayout>
+
+    <!-- 7. Secure Dialer -->
+    <LinearLayout android:id="@+id/dialerView" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_horizontal" android:orientation="vertical" android:paddingStart="18dp" android:paddingEnd="18dp" android:paddingTop="72dp" android:paddingBottom="18dp" android:background="@drawable/bg_call_glow" android:visibility="gone">
+        <TextView android:layout_width="wrap_content" android:layout_height="29dp" android:paddingStart="13dp" android:paddingEnd="13dp" android:gravity="center" android:background="@drawable/bg_status" android:text="●  SECURE MODE ACTIVE  🔒" android:textColor="#FF3045" android:textSize="10sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/dialDisplay" android:layout_width="match_parent" android:layout_height="54dp" android:gravity="center" android:layout_marginTop="7dp" android:text="Enter number" android:textColor="#F8FBFD" android:textSize="23sp" android:textStyle="bold"/>
+        <GridLayout android:layout_width="match_parent" android:layout_height="382dp" android:layout_marginTop="0dp" android:columnCount="3" android:rowCount="4">
+            <TextView android:id="@+id/btn1" style="@style/DialButton" android:text="1"/><TextView android:id="@+id/btn2" style="@style/DialButton" android:text="2"/><TextView android:id="@+id/btn3" style="@style/DialButton" android:text="3"/>
+            <TextView android:id="@+id/btn4" style="@style/DialButton" android:text="4"/><TextView android:id="@+id/btn5" style="@style/DialButton" android:text="5"/><TextView android:id="@+id/btn6" style="@style/DialButton" android:text="6"/>
+            <TextView android:id="@+id/btn7" style="@style/DialButton" android:text="7"/><TextView android:id="@+id/btn8" style="@style/DialButton" android:text="8"/><TextView android:id="@+id/btn9" style="@style/DialButton" android:text="9"/>
+            <ImageButton android:id="@+id/btnBackspace" android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="5dp" android:background="@drawable/bg_dial" android:src="@drawable/ic_backspace" android:padding="20dp" app:tint="#FFFFFF" android:contentDescription="Delete last digit"/>
+            <TextView android:id="@+id/btn0" style="@style/DialButton" android:text="0"/>
+            <ImageButton android:id="@+id/btnExitLock" android:layout_width="0dp" android:layout_height="0dp" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_margin="5dp" android:background="@drawable/bg_blue_circle_button" android:src="@drawable/ic_lock" android:padding="20dp" android:contentDescription="Owner unlock" app:tint="#FFFFFF"/>
+        </GridLayout>
+        <TextView android:id="@+id/btnCall" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="6dp" android:gravity="center" android:background="@drawable/bg_button_green" android:text="☎  CALL" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- 8/9. Calling and active call. Pre-answer state has ONLY Speaker + End Call. Active state adds Mute. -->
+    <LinearLayout android:id="@+id/callView" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_horizontal" android:orientation="vertical" android:paddingStart="22dp" android:paddingEnd="22dp" android:paddingTop="12dp" android:paddingBottom="16dp" android:background="@drawable/bg_call_glow" android:visibility="gone">
+        <TextView android:id="@+id/callStatusTop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Calling..." android:textColor="#C1CDD3" android:textSize="14sp"/>
+        <TextView android:id="@+id/callDuration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="" android:textColor="#C1CDD3" android:textSize="13sp"/>
+        <TextView android:id="@+id/callNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:textColor="#FFFFFF" android:textSize="27sp" android:textStyle="bold"/>
+        <!-- Wave visualization + person avatar -->
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_gravity="center">
+            <View android:id="@+id/callWaveView" android:layout_width="200dp" android:layout_height="200dp" android:layout_gravity="center" android:background="@drawable/bg_wave"/>
+            <FrameLayout android:layout_width="78dp" android:layout_height="78dp" android:layout_gravity="center" android:background="@drawable/bg_green_circle"><ImageView android:layout_width="46dp" android:layout_height="46dp" android:layout_gravity="center" android:src="@drawable/ic_person" app:tint="#10E87A"/></FrameLayout>
+        </FrameLayout>
+        <!-- Call controls: Mute + Speaker (visible during active call) -->
+        <LinearLayout android:id="@+id/callControls" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="horizontal" android:layout_marginBottom="8dp">
+            <LinearLayout android:id="@+id/muteContainer" android:layout_width="105dp" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical"><ImageButton android:id="@+id/btnMute" android:layout_width="62dp" android:layout_height="62dp" android:background="@drawable/bg_dial" android:src="@drawable/ic_mic" android:padding="17dp" app:tint="#FFFFFF"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Mute" android:textColor="#FFFFFF" android:textSize="12sp"/></LinearLayout>
+            <LinearLayout android:id="@+id/speakerContainer" android:layout_width="105dp" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical"><ImageButton android:id="@+id/btnSpeaker" android:layout_width="62dp" android:layout_height="62dp" android:background="@drawable/bg_dial" android:src="@drawable/ic_speaker" android:padding="15dp" app:tint="#FFFFFF"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Speaker" android:textColor="#FFFFFF" android:textSize="12sp"/></LinearLayout>
+        </LinearLayout>
+        <Button android:id="@+id/btnAnswerCall" android:layout_width="180dp" android:layout_height="54dp" android:background="@drawable/bg_button_green" android:text="☎  Answer" android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" android:visibility="gone"/>
+        <TextView android:id="@+id/btnEndCall" android:layout_width="180dp" android:layout_height="58dp" android:layout_marginTop="5dp" android:gravity="center" android:background="@drawable/bg_danger" android:text="☎  End Call" android:textColor="#FFFFFF" android:textSize="17sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- 10. Call ended -->
+    <LinearLayout android:id="@+id/callEndedView" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:padding="26dp" android:background="#020B08" android:visibility="gone">
+        <FrameLayout android:layout_width="92dp" android:layout_height="92dp" android:background="@drawable/bg_green_outline"><ImageView android:layout_width="55dp" android:layout_height="55dp" android:layout_gravity="center" android:src="@drawable/ic_check" app:tint="#FFFFFF"/></FrameLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="Call Ended" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Returning to dialer..." android:textColor="#C0CAD1" android:textSize="14sp"/>
+        <TextView android:id="@+id/btnBackToDialer" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="31dp" android:gravity="center" android:background="@drawable/bg_button_green" android:text="☎  Back to Dialer" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="24dp" android:layout_marginTop="9dp" android:text="●  SECURE MODE ACTIVE  🔒" android:textColor="#FF3045" android:textSize="10sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- 11. Owner unlock -->
+    <LinearLayout android:id="@+id/exitPinView" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_horizontal" android:orientation="vertical" android:paddingStart="24dp" android:paddingEnd="24dp" android:paddingTop="8dp" android:paddingBottom="10dp" android:visibility="gone">
+        <TextView android:id="@+id/btnExitBack" android:layout_width="match_parent" android:layout_height="38dp" android:gravity="center_vertical" android:text="‹" android:textColor="#FFFFFF" android:textSize="36sp"/>
+        <FrameLayout android:layout_width="54dp" android:layout_height="54dp" android:background="@drawable/bg_lock_red"><ImageView android:layout_width="32dp" android:layout_height="32dp" android:layout_gravity="center" android:src="@drawable/ic_lock" app:tint="#FF3045"/></FrameLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Owner Unlock" android:textColor="#FFFFFF" android:textSize="19sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:gravity="center" android:text="Enter your secure PIN&#10;to exit Secure Lending Mode." android:textColor="#C0CAD1" android:textSize="13sp"/>
+        <TextView android:id="@+id/exitDots" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_marginTop="4dp" android:gravity="center" android:text="○  ○  ○  ○" android:textColor="#9FC2D7" android:textSize="17sp"/>
+        <GridLayout android:layout_width="match_parent" android:layout_height="300dp" android:layout_marginTop="1dp" android:columnCount="3" android:rowCount="4">
+            <TextView android:id="@+id/epin1" style="@style/PinButton" android:text="1"/><TextView android:id="@+id/epin2" style="@style/PinButton" android:text="2"/><TextView android:id="@+id/epin3" style="@style/PinButton" android:text="3"/>
+            <TextView android:id="@+id/epin4" style="@style/PinButton" android:text="4"/><TextView android:id="@+id/epin5" style="@style/PinButton" android:text="5"/><TextView android:id="@+id/epin6" style="@style/PinButton" android:text="6"/>
+            <TextView android:id="@+id/epin7" style="@style/PinButton" android:text="7"/><TextView android:id="@+id/epin8" style="@style/PinButton" android:text="8"/><TextView android:id="@+id/epin9" style="@style/PinButton" android:text="9"/>
+            <TextView android:id="@+id/epinDelete" style="@style/PinButton" android:text="⌫"/><TextView android:id="@+id/epin0" style="@style/PinButton" android:text="0"/><TextView android:id="@+id/epinDone" style="@style/PinGreenButton" android:text="✓"/>
+        </GridLayout>
+        <TextView android:id="@+id/exitError" android:layout_width="wrap_content" android:layout_height="25dp" android:textColor="#FF3045" android:textSize="11sp"/>
+    </LinearLayout>
+</FrameLayout>
